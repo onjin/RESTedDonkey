@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="donkey">
+    <head>
+        <meta charset="utf-8">
+        <title>My HTML File</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+        <script src="/_static/js/app.js"></script>
+        <script src="/_static/js/controllers.js"></script>
+        <script src="/_static/js/filters.js"></script>
+        <script src="/_static/js/services.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span2">
+                    <ul class="resources">
+                        <li ng-repeat="resource in resources | filter:query | orderBy:orderProp" class="thumbnail">
+                        <a href="#/resources/{{resource.name}}">/{{resource.name}}</a>
+                        </li>
+                    </ul>
+                    Search: <input ng-model="query">
+                    Sort by:
+                    <select ng-model="orderProp">
+                        <option value="name">Alphabetical</option>
+                    </select>
+                </div>
+                <div class="span10">
+                    <div ng-view class="container"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

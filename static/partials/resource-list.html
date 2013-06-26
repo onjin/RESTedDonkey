@@ -1,0 +1,7 @@
+<div>
+    <ul class="resources">
+        <li ng-repeat="resource in resources | filter:query | orderBy:orderProp" class="thumbnail">
+        <a href="#/resources/{{resource.name}}">/{{resource.name}}</a>
+        </li>
+    </ul>
+</div>

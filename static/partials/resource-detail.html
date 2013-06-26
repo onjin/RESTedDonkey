@@ -1,0 +1,22 @@
+<div>
+    <h1>/{{resource.name}}</h1>
+
+    <p>{{resource.description}}</p>
+
+    <table class="table table-bordered table-condensed table-hover">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Default value</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="(field, default) in resource.template">
+                <td>{{ field }}</td>
+                <td>{{ default }}</td>
+                <td><i class="icon-trash"></i> Delete</a></li></td>
+            </li>
+        </tbody>
+    </ul>
+</div>
