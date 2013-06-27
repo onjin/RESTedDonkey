@@ -19,7 +19,7 @@ class Donkey(object):
     def static_js(self, request, subdir):
         return File('./static/' + subdir)
 
-    @app.route('/_manager/', branch=True)
+    @app.route('/_manager/')
     def manager_home(self, request):
         """Manager / admin / dashboard"""
         return open('index.html', 'r').read()

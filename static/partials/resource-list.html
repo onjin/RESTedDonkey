@@ -1,6 +1,9 @@
 <div>
+    <form class="form-search">
+        Search <input ng-model="query" type="text" class="input-medium search-query">
+    </form>
     <ul class="resources">
-        <li ng-repeat="resource in resources | filter:query | orderBy:orderProp" class="thumbnail">
+        <li ng-repeat="resource in resources | filter:query | orderBy:orderProp">
         <a href="#/resources/{{resource.name}}">/{{resource.name}}</a>
         </li>
     </ul>
