@@ -41,9 +41,9 @@ class Donkey(object):
             return json.dumps({'error': 404, 'message': 'item {} not found'.format(name)})
 
         if id:
-            result = database.dbroot[name][id]
+            result = parse_data(database.dbroot[name][id], database.dbroot[name]['_template'])
         else:
-            result = [data for key, data in database.dbroot[name].iteritems() if not key.startswith('_')]
+            result = [parse_data(data, database.dbroot[name]['_template']) for key, data in database.dbroot[name].iteritems() if not key.startswith('_')]
 
         return json.dumps(result)
 
