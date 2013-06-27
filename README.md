@@ -2,6 +2,10 @@ RESTedDonkey
 ============
 
 Instant REST API backend/frontend.
+Inside
+
+ * klein/twisted as web framework
+ * ZODB as backend object database
 
 Current status: pre ALPHA
 
