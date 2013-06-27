@@ -11,17 +11,13 @@ database = Database('database.fs')
 class Donkey(object):
     app = Klein()
 
-    @app.route('/_static/', branch=True)
+    @app.route('/_static', branch=True)
     def static(self, request):
         return File('./static')
 
-    @app.route('/_static/js/', branch=True)
-    def static_js(self, request):
-        return File('./static/js')
-
-    @app.route('/_static/partials/', branch=True)
-    def static_partials(self, request):
-        return File('./static/partials')
+    @app.route('/_static/<string:subdir>', branch=True)
+    def static_js(self, request, subdir):
+        return File('./static/' + subdir)
 
     @app.route('/_manager/', branch=True)
     def manager_home(self, request):
