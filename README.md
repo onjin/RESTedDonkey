@@ -19,6 +19,15 @@ Install && run
 Open
 
  * http://localhost:8080/\_manager
+ 
+Screenshots
+-----------
+### Dashboard
+![rested donkey dashboard](https://dl.dropboxusercontent.com/u/185133/gh/RESTedDonkey/manager-dashboard.jpg)
+
+### Single resource
+![rested donkey resource](https://dl.dropboxusercontent.com/u/185133/gh/RESTedDonkey/manager-resource.jpg)
+
 
 API
 ---
