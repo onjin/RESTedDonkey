@@ -11,8 +11,8 @@ Current status: pre ALPHA
 
 Install && run
 --------------
- * virtualenv .
- * source ./bin/activate
+ * virtualenv ./env
+ * source ./env/bin/activate
  * pip install -r requirements.txt
  * python server.py
 

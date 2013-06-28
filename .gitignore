@@ -1,8 +1,4 @@
-/bin
-/include
-/local
-*.egg-info
-/var
 *.py[co]
-/lib
-/database*
+/env
+*.egg-info
+/var/*.fs*

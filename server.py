@@ -22,13 +22,13 @@ class Donkey(object):
     @app.route('/_manager/')
     def manager_home(self, request):
         """Manager / admin / dashboard"""
-        return open('index.html', 'r').read()
+        return open('static/index.html', 'r').read()
 
     @app.route('/_manager/resources', branch=True)
-    @app.route('/_manager/resources/<string:name>.json', branch=True)
+    @app.route('/_manager/resources/<string:name>', branch=True)
     def manager_resources(self, request, name=None):
         """Manager / admin / dashboard"""
-        if name and name != '_list':
+        if name:
             result = {'name': name, 'template': database.dbroot[name]['_template']}
         else:
             result = [{'name': key, 'template': database.dbroot[key]['_template']} for key in database.dbroot.keys()]

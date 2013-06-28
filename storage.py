@@ -1,10 +1,9 @@
-from ZODB import FileStorage, DB
+import ZODB.config
 
 
 class Database(object):
     def __init__(self, path):
-        self.storage = FileStorage.FileStorage(path)
-        self.db = DB(self.storage)
+        self.db = ZODB.config.databaseFromURL('./zodb.conf')
         self.connection = self.db.open()
         self.dbroot = self.connection.root()
 
