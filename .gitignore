@@ -2,3 +2,5 @@
 /env
 *.egg-info
 /var/*.fs*
+_trial_temp
+.tox

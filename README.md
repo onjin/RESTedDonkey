@@ -14,7 +14,7 @@ Install && run
  * virtualenv ./env
  * source ./env/bin/activate
  * pip install -r requirements.txt
- * python server.py
+ * twistd -n web donkey.server.resource
 
 Open
 
