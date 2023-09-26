@@ -11,9 +11,7 @@ Current status: pre ALPHA
 
 Install && run
 --------------
- * virtualenv ./env
- * source ./env/bin/activate
- * pip install -r requirements.txt
+ * hatch env create default
  * python server.py
 
 Open
@@ -23,10 +21,10 @@ Open
 Screenshots
 -----------
 ### Dashboard
-![rested donkey dashboard](https://dl.dropboxusercontent.com/u/185133/gh/RESTedDonkey/manager-dashboard.jpg)
+![rested donkey dashboard](https://github.com/onjin/RESTedDonkey/assets/44516/a5cbc6fd-1f38-4d42-aad5-30a1a84e1bff)
 
 ### Single resource
-![rested donkey resource](https://dl.dropboxusercontent.com/u/185133/gh/RESTedDonkey/manager-resource.jpg)
+![rested donkey resource](https://github.com/onjin/RESTedDonkey/assets/44516/6cb6b4b0-ed45-4648-9451-7262d1e40548)
 
 
 API

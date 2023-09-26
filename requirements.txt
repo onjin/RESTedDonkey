@@ -1,6 +1,0 @@
-klein
-ZODB3
-BTrees
-repoze.catalog
-clint
-docopt
